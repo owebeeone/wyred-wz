@@ -6,6 +6,79 @@ members:
     path: wyred
     source_id: src_wyred
     source_kind: git
+    commit: 9ad8de7dc9bd182a6685325ec2fba103d9414ae0
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_agent:
+    path: wyred-agent
+    source_id: src_wyred_agent
+    source_kind: git
+    commit: 8187b0556980675da1b7d5c36aae661836c99ff8
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_audit:
+    path: wyred-audit
+    source_id: src_wyred_audit
+    source_kind: git
+    commit: 829f18d92c45557b80cb7e84301fa67d2d88f533
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_contract:
+    path: wyred-contract
+    source_id: src_wyred_contract
+    source_kind: git
+    commit: 471ecc4a1484ca8325b462b815253db2e3e8f086
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_examples:
+    path: wyred-examples
+    source_id: src_wyred_examples
+    source_kind: git
+    commit: e4661c47846445a9df4399036c8c8ea86cb09b92
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_harness:
+    path: wyred-harness
+    source_id: src_wyred_harness
+    source_kind: git
+    commit: 4e9d4cabc7d51cf7cd294e03b83886a5f4032842
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_kicad:
+    path: wyred-kicad
+    source_id: src_wyred_kicad
+    source_kind: git
+    commit: 1c0e845afdf13e78899e0b5485a3685906cef0a6
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_parts:
+    path: wyred-parts
+    source_id: src_wyred_parts
+    source_kind: git
+    commit: be33a69bab523d48e1ab767f7b21967276ca727e
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_ui:
+    path: wyred-ui
+    source_id: src_wyred_ui
+    source_kind: git
+    commit: acbb2020a6e1589dc79f9640e37ff1e423cc8071
     branch: main
     detached: false
     dirty: false
