@@ -6,7 +6,7 @@ members:
     path: wyred
     source_id: src_wyred
     source_kind: git
-    commit: 9ad8de7dc9bd182a6685325ec2fba103d9414ae0
+    commit: cd921182a47bbd34b5bc2ca069aa36b76f694ae5
     branch: main
     detached: false
     dirty: false
@@ -24,7 +24,7 @@ members:
     path: wyred-audit
     source_id: src_wyred_audit
     source_kind: git
-    commit: 829f18d92c45557b80cb7e84301fa67d2d88f533
+    commit: 1e67c096e2a901a1a60cd284f3b9cb31a0c22431
     branch: main
     detached: false
     dirty: false
@@ -42,7 +42,7 @@ members:
     path: wyred-examples
     source_id: src_wyred_examples
     source_kind: git
-    commit: e4661c47846445a9df4399036c8c8ea86cb09b92
+    commit: d54c027291c27069350c4ae6256d52bb596493f4
     branch: main
     detached: false
     dirty: false
@@ -51,7 +51,7 @@ members:
     path: wyred-harness
     source_id: src_wyred_harness
     source_kind: git
-    commit: 4e9d4cabc7d51cf7cd294e03b83886a5f4032842
+    commit: 9ecfb28e1da14058f2ab90999c99aa2da550ba63
     branch: main
     detached: false
     dirty: false
