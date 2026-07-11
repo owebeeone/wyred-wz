@@ -1,0 +1,12 @@
+schema: gwz.lock/v0
+workspace_id: ws_default
+manifest_schema: gwz.workspace/v0
+members:
+  mem_wyred:
+    path: wyred
+    source_id: src_wyred
+    source_kind: git
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true

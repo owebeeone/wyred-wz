@@ -1,0 +1,23 @@
+schema: gwz.marker/v0
+gwz_commit_id: 019f515c-0bd2-7f2f-9801-0e9f3f2f2b31
+workspace_id: ws_default
+created_at: unix-ms:1783776414674
+created_by:
+  actor_id: unknown
+root:
+  path: .
+  branch: main
+selected_targets:
+- '@root'
+- mem_wyred
+committed_targets:
+- '@root'
+members:
+  mem_wyred:
+    path: wyred
+    source_id: src_wyred
+    source_kind: git
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true

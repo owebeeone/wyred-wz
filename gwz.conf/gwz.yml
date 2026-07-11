@@ -1,0 +1,12 @@
+schema: gwz.workspace/v0
+workspace:
+  id: ws_default
+members:
+- id: mem_wyred
+  path: wyred
+  type: git
+  source_id: src_wyred
+  active: true
+  desired:
+    local_only: true
+  remotes: []
