@@ -3,6 +3,23 @@
 Append-only. One entry per decision; newest first. Format:
 `## YYYY-MM-DD — title` / context / decision / consequences.
 
+## 2026-07-12 — Ground-truth corpus moved to wyred-t9y (hybrid fork/vendor/download)
+
+The third-party board trees (exogenous denotations) moved from the elecscad
+symlink to `~/limbo/wyred-t9y` (plain git, NOT gwz-managed). Hybrid model:
+six upstreams as submodules of owebeeone `t9y-*` GitHub forks pinned at the
+provenance-recorded SHAs (availability + verifiable exogeneity; `update=none`
+so naive recursive clones don't pull ~500 MB unpruned — `materialize.py`
+drives init with sparse-checkout); MNT Reform vendored (GitLab upstream,
+CERN-OHL-S permits redistribution); rpi-cm4io download-on-materialize with
+pinned sha256 (LICENSE-UNKNOWN — never redistributed). `view/` reproduces the
+pruned reference trees byte-identically (one vendored override:
+`watchy/Watchy.kicad_prl`, a KiCad-generated settings file absent upstream).
+`wyred-wz/third-party` now symlinks `../wyred-t9y/view`; `run_gate.py` gained
+content-based probe-readiness checks and prints the ground-truth revision
+pins when probes run. Since t9y is outside gwz, that printed pin line is the
+audit-trail record of which ground truth a gate-green run used.
+
 ## 2026-07-12 — Phase-3 residual closure
 
 Context: the phase-2 adversarial critic left four residuals against the

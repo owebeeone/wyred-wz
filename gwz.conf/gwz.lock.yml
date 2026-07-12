@@ -42,7 +42,7 @@ members:
     path: wyred-examples
     source_id: src_wyred_examples
     source_kind: git
-    commit: d54c027291c27069350c4ae6256d52bb596493f4
+    commit: 37d6ed3e9633f4b3132c62bce6c68c4f0d834d67
     branch: main
     detached: false
     dirty: false

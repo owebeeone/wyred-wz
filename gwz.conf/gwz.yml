@@ -8,69 +8,105 @@ members:
   source_id: src_wyred
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred.git
+    fetch: true
+    push: true
 - id: mem_wyred_contract
   path: wyred-contract
   type: git
   source_id: src_wyred_contract
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-contract.git
+    fetch: true
+    push: true
 - id: mem_wyred_harness
   path: wyred-harness
   type: git
   source_id: src_wyred_harness
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-harness.git
+    fetch: true
+    push: true
 - id: mem_wyred_kicad
   path: wyred-kicad
   type: git
   source_id: src_wyred_kicad
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-kicad.git
+    fetch: true
+    push: true
 - id: mem_wyred_parts
   path: wyred-parts
   type: git
   source_id: src_wyred_parts
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-parts.git
+    fetch: true
+    push: true
 - id: mem_wyred_audit
   path: wyred-audit
   type: git
   source_id: src_wyred_audit
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-audit.git
+    fetch: true
+    push: true
 - id: mem_wyred_ui
   path: wyred-ui
   type: git
   source_id: src_wyred_ui
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-ui.git
+    fetch: true
+    push: true
 - id: mem_wyred_agent
   path: wyred-agent
   type: git
   source_id: src_wyred_agent
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-agent.git
+    fetch: true
+    push: true
 - id: mem_wyred_examples
   path: wyred-examples
   type: git
   source_id: src_wyred_examples
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-examples.git
+    fetch: true
+    push: true
