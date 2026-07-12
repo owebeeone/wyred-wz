@@ -1,0 +1,109 @@
+schema: gwz.marker/v0
+gwz_commit_id: 019f5566-b62a-721f-83f4-06c0eb3b2c56
+workspace_id: ws_default
+origin_url_hash: sha256:891eae66b7507ae69dd66254757a8cd5637eaeb0512757fc442bc6cbc790c66b
+created_at: unix-ms:1783844222612
+created_by:
+  actor_id: unknown
+root:
+  path: .
+  before_commit: e0c96954f5c0e3074c1f15d1b2b4838bee81510a
+  branch: main
+selected_targets:
+- '@root'
+- mem_wyred
+- mem_wyred_contract
+- mem_wyred_harness
+- mem_wyred_kicad
+- mem_wyred_parts
+- mem_wyred_audit
+- mem_wyred_ui
+- mem_wyred_agent
+- mem_wyred_examples
+committed_targets:
+- mem_wyred_contract
+- mem_wyred_kicad
+- mem_wyred_audit
+- '@root'
+members:
+  mem_wyred:
+    path: wyred
+    source_id: src_wyred
+    source_kind: git
+    commit: cd921182a47bbd34b5bc2ca069aa36b76f694ae5
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_agent:
+    path: wyred-agent
+    source_id: src_wyred_agent
+    source_kind: git
+    commit: 8187b0556980675da1b7d5c36aae661836c99ff8
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_audit:
+    path: wyred-audit
+    source_id: src_wyred_audit
+    source_kind: git
+    commit: 125844feec03c286a832e36d9e07042a4e27211b
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_contract:
+    path: wyred-contract
+    source_id: src_wyred_contract
+    source_kind: git
+    commit: 6ea2e6cc432e9bb32ab9475f847d09b670b7f941
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_examples:
+    path: wyred-examples
+    source_id: src_wyred_examples
+    source_kind: git
+    commit: 37d6ed3e9633f4b3132c62bce6c68c4f0d834d67
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_harness:
+    path: wyred-harness
+    source_id: src_wyred_harness
+    source_kind: git
+    commit: 9ecfb28e1da14058f2ab90999c99aa2da550ba63
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_kicad:
+    path: wyred-kicad
+    source_id: src_wyred_kicad
+    source_kind: git
+    commit: bd6b1462dea89e042ac68a9360532aad4b86a612
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_parts:
+    path: wyred-parts
+    source_id: src_wyred_parts
+    source_kind: git
+    commit: be33a69bab523d48e1ab767f7b21967276ca727e
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_ui:
+    path: wyred-ui
+    source_id: src_wyred_ui
+    source_kind: git
+    commit: acbb2020a6e1589dc79f9640e37ff1e423cc8071
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true

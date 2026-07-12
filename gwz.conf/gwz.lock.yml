@@ -24,7 +24,7 @@ members:
     path: wyred-audit
     source_id: src_wyred_audit
     source_kind: git
-    commit: 1e67c096e2a901a1a60cd284f3b9cb31a0c22431
+    commit: 125844feec03c286a832e36d9e07042a4e27211b
     branch: main
     detached: false
     dirty: false
@@ -33,7 +33,7 @@ members:
     path: wyred-contract
     source_id: src_wyred_contract
     source_kind: git
-    commit: 471ecc4a1484ca8325b462b815253db2e3e8f086
+    commit: 6ea2e6cc432e9bb32ab9475f847d09b670b7f941
     branch: main
     detached: false
     dirty: false
@@ -60,7 +60,7 @@ members:
     path: wyred-kicad
     source_id: src_wyred_kicad
     source_kind: git
-    commit: 1c0e845afdf13e78899e0b5485a3685906cef0a6
+    commit: bd6b1462dea89e042ac68a9360532aad4b86a612
     branch: main
     detached: false
     dirty: false
