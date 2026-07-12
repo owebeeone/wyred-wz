@@ -116,8 +116,12 @@ members:
   source_id: src_wyred_bench
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-bench.git
+    fetch: true
+    push: true
 - id: mem_gryth_ui
   path: gryth-ui
   type: git
