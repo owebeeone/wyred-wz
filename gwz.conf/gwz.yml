@@ -110,3 +110,59 @@ members:
     url: git@github.com:owebeeone/wyred-examples.git
     fetch: true
     push: true
+- id: mem_wyred_bench
+  path: wyred-bench
+  type: git
+  source_id: src_wyred_bench
+  active: true
+  desired:
+    local_only: true
+  remotes: []
+- id: mem_gryth_ui
+  path: gryth-ui
+  type: git
+  source_id: src_gryth_ui
+  active: true
+  desired:
+    branch: glp-0006-p1s4-gryth-panels
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/gryth-ui.git
+    fetch: true
+    push: true
+- id: mem_grip_core
+  path: grip-core
+  type: git
+  source_id: src_grip_core
+  active: true
+  desired:
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/grip-core.git
+    fetch: true
+    push: true
+- id: mem_grip_react
+  path: grip-react
+  type: git
+  source_id: src_grip_react
+  active: true
+  desired:
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/grip-react.git
+    fetch: true
+    push: true
+- id: mem_glade_decl_ts
+  path: glade-decl-ts
+  type: git
+  source_id: src_glade_decl_ts
+  active: true
+  desired:
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/glade-decl-ts.git
+    fetch: true
+    push: true

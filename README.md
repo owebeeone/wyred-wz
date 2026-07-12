@@ -24,6 +24,7 @@ committed contract artifacts, never through each other's code. Each member's
 | `wyred-audit` | one-command consumer audit tool | contract, harness |
 | `wyred-ui` | artifact viewer / review surface (mock-first) | contract |
 | `wyred-agent` | MCP/skills agentic surface | contract, wyred, audit |
+| `wyred-bench` | bench-card generator + measurement comparator (the oracle extended into physics) | contract |
 | `wyred-examples` | reference designs + real-board ground truths + integration tests | all (the only one) |
 
 **Invariant:** `wyred` and `wyred-harness` never import each other — the
@@ -33,9 +34,7 @@ repo boundary).
 ## Planned, not created
 
 `wyred-solve` (real solver rung: AF matrices, CSP) · `wyred-fab`
-(assembly/fab-house integration) · `wyred-bench` (generated physical test
-harnesses — the oracle extended into physics) · `wyred-physics` (GHz/openEMS
-loop).
+(assembly/fab-house integration) · `wyred-physics` (GHz/openEMS loop).
 
 ## Conventions
 

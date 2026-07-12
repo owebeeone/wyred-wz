@@ -88,12 +88,31 @@ the t9y build); create `owebeeone/wyred-klibs`; fork `KiCad/kicad-symbols`,
 stances + 8 open items in `elecscad` (`rl/RESUME.md`), now joined by the
 port-era DecisionLog entries already recorded here.
 
-## Status
+## Status (2026-07-13)
 
-- [ ] Schemas Phase 1 (1.1a–1.3) — ready to build now (no fable prerequisite)
-- [ ] 3D rung 1 Phase 1 — blocked on account-actions batch only
-- [ ] KiCad 1.1 / Placement 1.1 / Testplan 1.1 / SPICE 1.1 — fable steps,
-      queued behind the schemas proposal
-- [ ] All remaining opus steps — unblocked per their plan's dependency maps
-      once their 1.1 lands
-- [ ] `Wyred3dDesign.md` — next fable design task (rung 2)
+- [x] **Schemas Phase 1+2 — BUILT, verified, critic-fixed.** 107/107 goldens
+      validate; oracle parity file-for-file (incl. 2,943-mutation fuzz, zero
+      deltas); 12 committed mutant fixtures; audit `SCHEMA_INVALID` stage;
+      Part E + changelog in EMIT_CONTRACT. Staged uncommitted in
+      wyred-contract — **awaiting ratification** (findings F1–F12).
+- [x] **All four fable 1.1 proposals DRAFTED, awaiting ratification** (in
+      landing order): `ContractProposalKicadExport.md` +
+      `wyred-kicad/EXPORT.md` · `WyredPlacementSemantics.md` ·
+      `ProposalTestplanContract.md` · `WyredSpiceContract.md`.
+- [x] **Kicad / placement / testplan / spice / 3D-rung-1 builds — STAGED
+      COMPLETE (2026-07-13), awaiting commit-time ratification.** The
+      wyred-buildout-phase1 workflow (22 agents, 0 errors) built all
+      planned steps as uncommitted working tree; independent verify PASS
+      (run_gate green end-to-end: 20 artifacts, battery 30/30, kicad
+      round-trip 18/18, watchy placement 4/4, spice DC oracle on
+      ngspice-46; sanctioned census: 107 goldens untouched + the 8
+      intent_10_spice_divider files). Buildout-critic findings F1 (testplan
+      signal-shape seam) / F2 (placement join-mode deferral recording) /
+      F3 (this status) resolved 2026-07-13 — see DecisionLog.
+- [x] 3D rung 1 — BUILT (wyred-klibs + threed wrappers), staged.
+- [ ] Single-writer landings of the contract deltas + goldens additions —
+      at Gianni's commit-time review, in the §"Contract ratifications"
+      order above.
+- [ ] `Wyred3dDesign.md` — next fable design task (rung 2).
+- [ ] wyred-ui — separate track: `GrythWyredUiDesignPlan.md` ratified by
+      Gianni (see DecisionLog); journeys in `WyredUiUserJourneys.md`.

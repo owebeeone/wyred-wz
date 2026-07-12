@@ -3,6 +3,143 @@
 Append-only. One entry per decision; newest first. Format:
 `## YYYY-MM-DD — title` / context / decision / consequences.
 
+## 2026-07-13 — User documentation: per-member docs/ + a wyred-docs member (both)
+
+The placement rule: **a doc lives where its change-cause lives.**
+Member-surface reference (CLI flags, code vocabularies, APIs) → that
+member's `docs/`, versioned and tested with the code. Product docs
+(getting started, authoring tutorials, workflow guide, concepts,
+glossary) → a new `wyred-docs` member (name confirmed at creation;
+`wyred-doc` acceptable) that AGGREGATES member docs/ at build time
+(collector script + mkdocs, the gwz-cli site precedent) — one published
+site, zero duplicated content. Docs are never normative (contract/schemas
+stay truth); docs join the oracle culture — every runnable example is
+executed by a doc-test runner or explicitly marked not-runnable, wired
+into the member's tests. dev-docs/ stays contributor/decision material.
+Plan: WyredPlanDocs.md. Publishing is a Gianni-gated account action.
+
+## 2026-07-13 — Buildout-critic findings F1/F2/F3 resolved
+
+- **F1 (HIGH, testplan signal seam):** the signal-check `expect` shape is
+  pinned FLAT (`{freq, freq_low, freq_high}` / `{duty, duty_low,
+  duty_high}`, trio present iff declared) in ProposalTestplanContract §5 —
+  the shape the engine emits. wyred-bench's comparator + card generator
+  align to it; the divergent hand-authored fixture is retired in favor of
+  the engine-emitted canonical (byte-identical across repos), with
+  synthetic shapes (duty band etc.) kept under distinct filenames; the
+  bench↔emitted-artifact seam is gate-wired so this class cannot recur
+  silently.
+- **F2 (MED, placement join modes):** the pinmap-`l1_role` join is now
+  recorded as SPECIFIED-NOT-BUILT in WyredPlacementSemantics §1 itself
+  (deferred until a laid-out wyred-emitted board exists); the
+  correspondence-table join is the only v0 implementation, fail-closed.
+- **F3 (LOW):** WyredPlanIndex status refreshed to staged-complete-
+  awaiting-ratification.
+
+## 2026-07-13 — wyred-ui Phase 0 + Phase 1 BUILT and verified (working tree)
+
+Built the design+plan below through the Phase-1 milestone; all working-tree,
+no commits. As-built:
+- **gwz members added** to wyred-wz: gryth-ui (`bffbdd0`), grip-core
+  (`97ff6c2`), grip-react (`c13b8a7`), glade-decl-ts (`4467e31`, grip-core's
+  compile-wall dep) — cloned, origins→GitHub, `gwz capture`d.
+- **wyred-ui workspace**: `@wyredjs/artifacts` (pure: kinds, ArtifactStore +
+  StaticStore/DirectoryStore, design-set union, the validate.py port),
+  `@wyredjs/plugin-wyred` (grips/taps + WyredStoreTap + census/raw views +
+  set picker; plugin-api/grip-react/react as PEER deps), `app` (standalone
+  host). no-react-state scanner + eslint bans adopted. 198 tests green.
+- **gryth-ui test mount**: `src/plugins/wyred/` shim + `link:` dep (NOT
+  `file:` — file: hardlink-copies and breaks the wyred-contract relative
+  schema imports; link: symlinks so vite realpath-resolves them) + vite
+  `server.fs.allow` for the wyred-wz sibling. gryth-ui 74 tests + full
+  `tsc -b && vite build` green with the mount.
+- **Verified in-browser** (both the gryth-ui mount and the standalone app):
+  census over the real ga019 goldens renders 19 stems with the two L1-only
+  stems as honest partial rows, the SPICE/pinmapdiff/baseline/connlock
+  columns correct, all schema-valid in-browser, live watch loop; the 12
+  contract mutants each render INVALID at exactly the oracle's
+  (pointer, keyword); clicking an invalid cell opens the raw view with the
+  SCHEMA_INVALID banner + exact emitted bytes.
+- **Validator parity**: in-browser verdicts match validate.py file-for-file
+  over 114 goldens + 12 mutants (mutant tests now assert the oracle's exact
+  pointer+keyword). Documented ecosystem-correct divergences: JS RegExp vs
+  Python re on line-terminator edge cases (schema $comment endorses the
+  strict JS reading), and integer literals beyond double range at the
+  caller's JSON.parse — neither exercised by any contract artifact.
+- **Adversarial review** (3-lens: fence / validator-parity / house-rules) ran
+  post-build; its 2 blockers (mount linking; regex parity) + 2 majors
+  (picker stale-closure writes; integer overflow) + minors (NUL KEY_SEP
+  making storeTap.ts binary; reload cache-bust; setDirectoryHandle epoch;
+  raw-view spurious fetch; dead export) were all fixed or documented before
+  this entry.
+- **Entity-URI proposal** written: `WyredProposalEntityUri.md` (Phase 0.3) —
+  `wyred://<set>/<stem>[/<kind>]#type:id`, awaiting ratification (journeys
+  §9 Q4). Fence addendum added to wyred-ui/CLAUDE.md.
+
+Next: Phase 2 (netlist / pinmap / bom + entity index & cross-links).
+
+## 2026-07-13 — GrythWyredUiDesignPlan ratified ("go"); wyred-ui build starts
+
+Gianni's "go" ratified `GrythWyredUiDesignPlan.md` (the how for the stack
+reversal below) and authorized the build. Architecture: wyred-ui = three
+packages — `@wyredjs/artifacts` (pure library, grip-free) /
+`@wyredjs/plugin-wyred` (the gryth plugin; plugin-api/grip-react/react as
+PEER deps) / `app` (standalone host = `@grythjs/desktop` + wyred plugins
+only) — consuming gryth-ui/grip-core/grip-react as commit-pinned gwz
+members of wyred-wz (the glade-decl-ts precedent; gryth-ui pinned at
+`bffbdd0`, GLP-0006 P1.S4). Dev order: gryth-ui test mount FIRST (one shim
+dir + one `file:` dep in gryth-wz/gryth-ui, reversible), standalone host at
+Phase 1.5. Design sets (multi-tree fleets) are the workspace unit; entity
+URIs get their own proposal (Phase 0.3) before view work; annotations are
+local-first Phase 4; phases 0–4 zero glade, Phase 5 (shared design doc)
+gates on gryth's seam. Fence re-scoped: emitted artifacts immutable; the UI
+may AUTHOR provenance-stamped records (annotations now, J4 measurements
+later); never runs the toolchain, never derives. gryth-ui coding rules
+adopted wholesale (no React state — grips/taps only; scanner + eslint
+bans). WyredPlanUi.md superseded. Per house convention, build output stays
+UNCOMMITTED working tree pending commit-time review.
+
+## 2026-07-13 — wyred-ui stack REVERSED by Gianni: gryth-ui, agents as collaborators
+
+Supersedes the same-day plain-React entry below. Gianni's direction: the
+UI is built on **gryth-ui** (plugin-based, glade-backed, agents connect
+via session capabilities for human/AI collaboration). Requirements source:
+`WyredUiUserJourneys.md` (J1–J6 + entity addressing). The ArtifactStore
+seam survives as the glade doc-scope provider; the trust posture carries
+unchanged. WyredPlanUi.md is superseded pending redesign (do not build
+from it); WyredUiDesign.md §7 stack section superseded, rest stands.
+Production-strategy colouring (J6): design decisions bend toward
+AI-driven procurement — sourcing slots + release-bundle-as-negotiation-
+artifact + uniform capability-scoped agents are the proposed lynch-pins,
+pending Gianni's review (journeys doc §9).
+
+## 2026-07-13 — wyred-ui: plain React + Vite behind a grip-ready store seam
+
+Resolves the open bootstrap question (plain-React vs grip/glial client).
+Decision (provisional, same commit-time review deal): **plain React + Vite
++ TypeScript now**; all data access behind the `ArtifactStore` interface
+(WyredUiDesign §3.1) so a grip/gryth live provider can slot in later
+without touching views. Rationale: dogfooding grip is a real want, but
+coupling two in-flight projects puts wyred-ui on gryth's critical path for
+zero v1 payoff; the seam preserves the option. Trust posture:
+render-what-was-emitted — the viewer never derives, schema-validates
+everything in-browser, and labels engine-self-reported verdict fields as
+such. Design: WyredUiDesign.md; plan: WyredPlanUi.md.
+
+## 2026-07-13 — Workflow-design proposals provisionally accepted ("go"); account batch executed
+
+Gianni's "go" (2026-07-13) authorized: (a) the account-actions batch
+(publish wyred-t9y; create wyred-klibs; fork KiCad/kicad-symbols,
+kicad-footprints, kicad-packages3D as klibs-*), and (b) proceeding with the
+opus-4.8 build fleet against the five staged proposals (schemas package
+F1–F12; ContractProposalKicadExport + EXPORT.md; WyredPlacementSemantics;
+ProposalTestplanContract RATIFY-1–7; WyredSpiceContract incl. the
+intent_10_spice_divider golden-census event). **Provisional acceptance:**
+builds proceed on these stances, but every contract-shaped change remains
+UNCOMMITTED working tree; final ratification is the commit-time review.
+Any stance Gianni reverses at review reverts the dependent code before
+commit — the proposals, not the code, are the record of what was decided.
+
 ## 2026-07-12 — Ground-truth corpus moved to wyred-t9y (hybrid fork/vendor/download)
 
 The third-party board trees (exogenous denotations) moved from the elecscad
