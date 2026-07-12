@@ -29,7 +29,7 @@ create` argument either way.
 - No commits (working tree, house review flow). No new runtime
   dependencies in any code member; the docs toolchain (mkdocs) is confined
   to wyred-docs.
-- Site publishing (Pages/wyred.dev) is a Gianni-gated account action —
+-   Site publishing (Pages/wyred.dev) is a Gianni-gated account action —
   planned, never executed by an agent.
 
 ## Phase 1 — member, skeleton, aggregation, doc-tests (milestone: `mkdocs build` produces the unified site from live sources; doc-tests run)
