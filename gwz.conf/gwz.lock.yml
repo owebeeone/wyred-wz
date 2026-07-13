@@ -42,7 +42,7 @@ members:
     path: wyred
     source_id: src_wyred
     source_kind: git
-    commit: 6146cec9d679dc008091e8513fa789a32a8798b9
+    commit: 82f24a3a700d2cb245fdacd471344a1832f93a14
     branch: main
     detached: false
     dirty: false
@@ -60,7 +60,7 @@ members:
     path: wyred-audit
     source_id: src_wyred_audit
     source_kind: git
-    commit: 125844feec03c286a832e36d9e07042a4e27211b
+    commit: 60ea94a13eb9d81289346832e5e5e2ba6b018d97
     branch: main
     detached: false
     dirty: false
@@ -69,7 +69,7 @@ members:
     path: wyred-bench
     source_id: src_wyred_bench
     source_kind: git
-    commit: a1ab0873c6f7d19194f9db1b13319e9feef52ed1
+    commit: a4c208e2a32090341042a15ecdc3f53fc91728a0
     branch: main
     detached: false
     dirty: false
@@ -78,7 +78,16 @@ members:
     path: wyred-contract
     source_id: src_wyred_contract
     source_kind: git
-    commit: 421a9a9222a74cb09bd5a7de7aa3735f01cceaa3
+    commit: 4e859502c774c8739e946b5515fc7e7b2cd5d75b
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_docs:
+    path: wyred-docs
+    source_id: src_wyred_docs
+    source_kind: git
+    commit: 743f6b6d0aeb9b306eb1572b388a344b000c5bd1
     branch: main
     detached: false
     dirty: false
@@ -96,7 +105,7 @@ members:
     path: wyred-harness
     source_id: src_wyred_harness
     source_kind: git
-    commit: 75b916a4a2680e3e74a012a832d49affba65ce96
+    commit: d4cbcbdad4b689bafca3b9815c479f4017629bca
     branch: main
     detached: false
     dirty: false
@@ -105,7 +114,7 @@ members:
     path: wyred-kicad
     source_id: src_wyred_kicad
     source_kind: git
-    commit: cda9f33abfabbb5665fa9db0fd825e07d75bc770
+    commit: 6c258762018cf50061554c2d07203a373ec8a275
     branch: main
     detached: false
     dirty: false

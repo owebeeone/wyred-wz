@@ -170,3 +170,15 @@ members:
     url: git@github.com:owebeeone/glade-decl-ts.git
     fetch: true
     push: true
+- id: mem_wyred_docs
+  path: wyred-docs
+  type: git
+  source_id: src_wyred_docs
+  active: true
+  desired:
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/wyred-docs.git
+    fetch: true
+    push: true

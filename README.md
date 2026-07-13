@@ -26,6 +26,7 @@ committed contract artifacts, never through each other's code. Each member's
 | `wyred-agent` | MCP/skills agentic surface | contract, wyred, audit |
 | `wyred-bench` | bench-card generator + measurement comparator (the oracle extended into physics) | contract |
 | `wyred-examples` | reference designs + real-board ground truths + integration tests | all (the only one) |
+| `wyred-docs` | product documentation (tutorials, workflow, concepts); aggregates every member's `docs/` into one site at build time | contract |
 
 **Invariant:** `wyred` and `wyred-harness` never import each other — the
 engine is independent of its checkers (the ga019 trust property, enforced by
