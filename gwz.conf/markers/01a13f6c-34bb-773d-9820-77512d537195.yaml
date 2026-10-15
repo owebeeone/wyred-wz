@@ -1,0 +1,167 @@
+schema: gwz.marker/v0
+gwz_commit_id: 01a13f6c-34bb-773d-9820-77512d537195
+workspace_id: ws_default
+origin_url_hash: sha256:891eae66b7507ae69dd66254757a8cd5637eaeb0512757fc442bc6cbc790c66b
+created_at: unix-ms:1792065418706
+created_by:
+  actor_id: unknown
+root:
+  path: .
+  before_commit: bf6d8a66401de3bebaa31bb6f5a3bed623eb11d0
+  branch: main
+selected_targets:
+- '@root'
+- mem_wyred
+- mem_wyred_contract
+- mem_wyred_harness
+- mem_wyred_kicad
+- mem_wyred_parts
+- mem_wyred_audit
+- mem_wyred_ui
+- mem_wyred_agent
+- mem_wyred_examples
+- mem_wyred_bench
+- mem_gryth_ui
+- mem_grip_core
+- mem_grip_react
+- mem_glade_decl_ts
+- mem_wyred_docs
+committed_targets:
+- mem_wyred_ui
+- '@root'
+members:
+  mem_glade_decl_ts:
+    path: glade-decl-ts
+    source_id: src_glade_decl_ts
+    source_kind: git
+    commit: a393ecb4cff3c4d66ce9a545193c2167b08e82a6
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_grip_core:
+    path: grip-core
+    source_id: src_grip_core
+    source_kind: git
+    commit: e5febd19bbe6a3a0e605e9dd89cc96ef4dad2584
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_grip_react:
+    path: grip-react
+    source_id: src_grip_react
+    source_kind: git
+    commit: c13b8a75e88e33cd8dcaf5222a06c76d4370d010
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_gryth_ui:
+    path: gryth-ui
+    source_id: src_gryth_ui
+    source_kind: git
+    commit: ca04934f46caa4a111af53adb5ddbb7e0d0468de
+    branch: glp-0006-p1s4-gryth-panels
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred:
+    path: wyred
+    source_id: src_wyred
+    source_kind: git
+    commit: 82f24a3a700d2cb245fdacd471344a1832f93a14
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_agent:
+    path: wyred-agent
+    source_id: src_wyred_agent
+    source_kind: git
+    commit: 8187b0556980675da1b7d5c36aae661836c99ff8
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_audit:
+    path: wyred-audit
+    source_id: src_wyred_audit
+    source_kind: git
+    commit: 60ea94a13eb9d81289346832e5e5e2ba6b018d97
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_bench:
+    path: wyred-bench
+    source_id: src_wyred_bench
+    source_kind: git
+    commit: a4c208e2a32090341042a15ecdc3f53fc91728a0
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_contract:
+    path: wyred-contract
+    source_id: src_wyred_contract
+    source_kind: git
+    commit: 4e859502c774c8739e946b5515fc7e7b2cd5d75b
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_docs:
+    path: wyred-docs
+    source_id: src_wyred_docs
+    source_kind: git
+    commit: 743f6b6d0aeb9b306eb1572b388a344b000c5bd1
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_examples:
+    path: wyred-examples
+    source_id: src_wyred_examples
+    source_kind: git
+    commit: c9411b4f9e58c260b9285add87350716fbf14bfd
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_harness:
+    path: wyred-harness
+    source_id: src_wyred_harness
+    source_kind: git
+    commit: d4cbcbdad4b689bafca3b9815c479f4017629bca
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_kicad:
+    path: wyred-kicad
+    source_id: src_wyred_kicad
+    source_kind: git
+    commit: 6c258762018cf50061554c2d07203a373ec8a275
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_parts:
+    path: wyred-parts
+    source_id: src_wyred_parts
+    source_kind: git
+    commit: be33a69bab523d48e1ab767f7b21967276ca727e
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_wyred_ui:
+    path: wyred-ui
+    source_id: src_wyred_ui
+    source_kind: git
+    commit: 162e86559b965b6d75c179e26d219cfdc36dfe12
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
